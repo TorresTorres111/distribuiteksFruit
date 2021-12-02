@@ -20,7 +20,7 @@ router.get( '/home', auth, getHome );
 
 
 // get /*
-// router.get( '/*', getOther );
+router.get( '/*', getOther );
 
 
 // exports
