@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/x-icon" id="icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/accBox.css">
+    <link rel="stylesheet" href="/css/fruitBox.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/sci.css">
+</head>
+
+
+
+<body>
+
+
+    <section>
+
+        <div class="bg" id="bg"></div>
+
+        <header>
+            <a href="/home" class="logo">ksFruit</a>
+            <ul class="navigation">
+                <li><a href="/tasks" id="navTasks"></a></li>
+                <li><a href="/addTask" id="navAddTask"></a></li>
+                <li><a href="/account" id="navAccount" class="active"></a></li>
+                <li><a href="/logout" id="navLogout"></a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="accBox">
+                <div>
+                    <p id="name"></p>
+                    <input type="text" value="{{ user.name }}" readonly>
+                </div>
+                <div>
+                    <p></p>
+                    <a href="/name" id="editName"></a>
+                </div>
+                <div>
+                    <p></p>
+                    <a href="/password" id="changePassword"></a>
+                </div>
+                <br>
+                <div>
+                    <p id="completed"></p>
+                    <input type="text" value="{{ user.completed }}" class="half" readonly id="task">
+                </div>
+                <div>
+                    <p id="changeLanguaje"></p>
+                    <select value="Languajes" class="half" id="languaje">
+                        <option>English</option>
+                        <option>Español</option>
+                        <option>Français</option>
+                        <option>日本</option>
+                        <option>한국인</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fruitBox">
+                <img id="fruitImg">
+            </div>
+        </div>
+
+        <div class="theme">
+            <h1 id="fruitText"></h1>
+        </div>
+
+        <ul class="thumb">
+            <li id="apple"><img src="/img/fruits/apple.png" id="apple"></li>
+            <li id="mango"><img src="/img/fruits/mango.png" id="mango"></li>
+            <li id="watermelon"><img src="/img/fruits/watermelon.png" id="watermelon"></li>
+            <li id="dragonFruit"><img src="/img/fruits/dragonFruit.png" id="dragonFruit"></li>
+            <li id="pineApple"><img src="/img/fruits/pineApple.png" id="pineApple"></li>
+            <li id="blueBerry"><img src="/img/fruits/blueBerry.png" id="blueBerry"></li>
+        </ul>
+
+        <ul class="sci">
+            <li><a href="#"><img src="/img/social/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="/img/social/twitter.png" alt="twitter.png"></a></li>
+            <li><a href="#"><img src="/img/social/instagram.png" alt="instagram.png"></a></li>
+        </ul>
+
+        {{> msg }}
+
+    </section>
+
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/languaje.js"></script>
+
+    <script src="/js/changes/theme/icon.js"></script>
+    <script src="/js/changes/languaje/titles/account.js"></script>
+
+    <script src="/js/changes/theme/bg.js"></script>
+    <script src="/js/changes/languaje/nav2.js"></script>
+    <script src="/js/acc.js"></script>
+    <script src="/js/changes/languaje/forms/account.js"></script>
+    <script src="/js/changes/theme/img.js"></script>
+    <script src="/js/changes/theme/text.js"></script>
+
+    <script src="/js/changes/languaje/msg.js"></script>
+
+
+</body>
+</html>

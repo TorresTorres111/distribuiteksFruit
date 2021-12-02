@@ -1,0 +1,132 @@
+
+.content .accBox {
+    position: relative;
+    width: 60%;
+    height: 460px;
+    max-width: 600px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.content .accBox div {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: start;
+}
+
+
+.content .accBox div p {
+    color: #fff;
+    font-size: 15px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.content .accBox div a,
+.content .accBox div input {
+    width: 60%;
+    padding: 12px;
+    color: #3E3E3E;
+    border-radius: 40px;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    background: #fff;
+}
+
+
+.content .accBox div a {
+    text-align: center;
+    text-decoration: none;
+    background: #3E3E3E;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.content .accBox div a:hover {
+    background: #3E3E3E;
+    color: #fff;
+}
+
+
+.content .accBox div input {
+    padding-left: 20px;
+}
+
+
+.content .accBox div input.half {
+    width: 30%;
+}
+
+
+.content .accBox div select {
+    width: 30%;
+    padding: 12px;
+    padding-left: 20px;
+    color: #3E3E3E;
+    border-radius: 40px;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translate( -50% );
+    display: flex;
+}
+
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    height: 60px;
+    background: rgba( 255, 255, 255, 0.1 );
+    padding: 5px;
+    border: 2px solid rgba( 255, 255, 255, 0.25 );
+}
+
+
+.thumb li.active {
+    border: 2px solid rgba( 255, 255, 255, 0.75 );
+}
+
+
+.thumb li::before {
+    position: absolute;
+    top: -200px;
+    right: -50px;
+    content: attr( data-text );
+    white-space: nowrap;
+    font-size: 100px;
+    color: rgba( 0, 0, 0, 0.2 );
+    opacity: 0;
+    font-weight: 800;
+    pointer-events: none;
+}
+
+
+.thumb li.active::before {
+    opacity: 1;
+}
+
+
+.thumb li img {
+    max-width: 50px;
+}

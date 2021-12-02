@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Tasks</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="/img/icon/apple.png" type="image/x-icon" id="icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/tasksBox.css">
+    <link rel="stylesheet" href="/css/fruitBox.css">
+    <link rel="stylesheet" href="/css/sci.css">
+</head>
+
+
+
+<body>
+
+
+    <section>
+
+        <div class="bg" id="bg"></div>
+
+        <header>
+            <a href="/home" class="logo">ksFruit</a>
+            <ul class="navigation">
+                <li><a href="/tasks" id="navTasks" class="active"></a></li>
+                <li><a href="/addTask" id="navAddTask"></a></li>
+                <li><a href="/account" id="navAccount"></a></li>
+                <li><a href="/logout" id="navLogout"></a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="tasksBox">
+                <div class="auto">
+                    {{#each tasks}}
+                        <div class="task">
+                            <h2>{{ title }}</h2>
+                            <p>{{ description }}</p>
+                            <span>{{ date }}</span>
+                            <div class="options">
+                                <form action="/completedTask/{{ _id }}?_method=PUT" method="POST">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <input type="submit" value="Completed" class="completed">
+                                </form>
+                                <form action="/editTask/{{ _id }}" method="GET">
+                                    <input type="submit" value="Edit" class="edit">
+                                </form>
+                                <form action="/deleteTask/{{ _id }}?_method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="submit" value="Remove" class="remove">
+                                </form>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="fruitBox">
+                <img id="fruitImg">
+            </div>
+        </div>
+
+        <ul class="sci">
+            <li><a href="#"><img src="/img/social/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="/img/social/twitter.png" alt="twitter.png"></a></li>
+            <li><a href="#"><img src="/img/social/instagram.png" alt="instagram.png"></a></li>
+        </ul>
+
+        {{> msg }}
+
+    </section>
+
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/languaje.js"></script>
+
+    <script src="/js/changes/theme/icon.js"></script>
+    <script src="/js/changes/languaje/titles/tasks.js"></script>
+
+    <script src="/js/changes/theme/bg.js"></script>
+    <script src="/js/changes/languaje/nav2.js"></script>
+    <script src="/js/changes/languaje/tasks.js"></script>
+    <script src="/js/changes/theme/img.js"></script>
+
+    <script src="/js/changes/languaje/msg.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/x-icon" id="icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/sliderBox.css">
+    <link rel="stylesheet" href="/css/fruitBox.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/sci.css">
+</head>
+
+
+
+<body>
+
+
+    <section>
+
+        <div class="bg" id="bg"></div>
+
+        <header>
+            <a href="/home" class="logo">ksFruit</a>
+            <ul class="navigation">
+                <li><a href="/tasks" id="navTasks"></a></li>
+                <li><a href="/addTask" id="navAddTask"></a></li>
+                <li><a href="/account" id="navAccount"></a></li>
+                <li><a href="/logout" id="navLogout"></a></li>
+            </ul>
+        </header>
+
+        {{!-- <div class="errors">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, reiciendis?</p>
+        </div> --}}
+
+        <div class="content">
+            <div class="sliderBox">
+                <div class="slides">
+                    <input type="radio" id="radio1" name="radio">
+                    <input type="radio" id="radio2" name="radio">
+                    <input type="radio" id="radio3" name="radio">
+                    <div class="slide first">
+                        <div>
+                            <h2 id="h21"></h2>
+                            <p id="p1"></p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div>
+                            <h2 id="h22"></h2>
+                            <p id="p2"></p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div>
+                            <h2 id="h23"></h2>
+                            <p id="p3"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-manual">
+                    <label class="manual-btn active" for="radio1" id="btn1"></label>
+                    <label class="manual-btn" for="radio2" id="btn2"></label>
+                    <label class="manual-btn" for="radio3" id="btn3"></label>
+                </div>
+            </div>
+            <div class="fruitBox">
+                <img id="fruitImg">
+            </div>
+        </div>
+
+        <div class="theme">
+            <h1 id="fruitText"></h1>
+        </div>
+
+        <ul class="sci">
+            <li><a href="#"><img src="/img/social/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="/img/social/twitter.png" alt="twitter.png"></a></li>
+            <li><a href="#"><img src="/img/social/instagram.png" alt="instagram.png"></a></li>
+        </ul>
+
+        {{> msg }}
+
+    </section>
+
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/languaje.js"></script>
+
+    <script src="/js/changes/theme/icon.js"></script>
+    <script src="/js/changes/languaje/titles/home.js"></script>
+
+    <script src="/js/changes/theme/bg.js"></script>
+    <script src="/js/changes/languaje/nav2.js"></script>
+    <script src="/js/changes/languaje/slider.js"></script>
+    <script src="/js/changes/theme/img.js"></script>
+    <script src="/js/changes/theme/text.js"></script>
+
+    <script src="/js/slider.js"></script>
+    <script src="/js/changes/languaje/msg.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+.content .sliderBox {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+}
+
+
+.content .sliderBox .slides {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.content .sliderBox .slides input {
+    display: none;
+}
+
+
+.content .sliderBox .slide {
+    width: 100%;
+    transition: 1s;
+}
+
+
+.content .sliderBox .slide div {
+    width: 600px;
+    height: 100%;
+}
+
+
+.content .sliderBox .slide h2 {
+    color: #fff;
+    font-size: 60px;
+    line-height: 120px;
+    font-weight: 800;
+}
+
+
+.content .sliderBox .slide p {
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+
+.content .sliderBox .navigation-manual {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.content .sliderBox .navigation-manual .manual-btn {
+    border: 2px solid #fff;
+    margin-right: 15px;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.content .sliderBox .navigation-manual .manual-btn.active {
+    background: #fff;
+}
+
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+
+
+.content .sliderBox .navigation-manual .manual-btn:hover {
+    background: #fff;
+}
