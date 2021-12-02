@@ -40,7 +40,7 @@ const changeForm = () => {
         checkin.value = '체크인';
     };
     if ( !languaje ) {
-        name.placeholder = 'Mail';
+        name.placeholder = 'Name';
         mail.placeholder = 'Mail';
         password.placeholder = 'Password';
         checkin.value = 'Check in';
